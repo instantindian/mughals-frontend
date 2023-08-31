@@ -5,7 +5,7 @@ import Getintouch from '@/components/Getintouch'
 import HeroBanner from '@/components/HeroBanner'
 import Newsletter from '@/components/Newsletter'
 import Services from '@/components/Services'
-import Homemenu from '../components/Homemenu'
+
 
 
 export default function Home() {
