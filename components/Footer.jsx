@@ -39,7 +39,9 @@ const Footer = () => {
                             <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
                                 {
                                     footerNavs.map((item, idx) => (
-                                        <li className="text-gray-800 hover:text-gray-500 duration-150 font-semibold">
+                                        <li
+                                        key={idx}
+                                         className="text-gray-800 hover:text-gray-500 duration-150 font-semibold">
                                             <a key={idx} href={item.href}>
                                                 {item.name}
                                             </a>

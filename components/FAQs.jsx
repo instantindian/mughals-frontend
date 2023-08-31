@@ -2,7 +2,7 @@ import Link from "next/link";
 import FaqsCard from "./FaqsCard";
 
 // Home page FAQ's
-export default () => {
+const FAQs =  () => {
   const faqsList = [
     {
       q: "What are some random questions to ask?",
@@ -48,10 +48,12 @@ export default () => {
             href={"/"}
             className="px-10 py-3.5 w-full bg-gradient-to-bl from-secondaryColor to-thirdColor text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
           >
-            See More FAQ's
+            See More FAQs
           </Link>
         </div>
       </div>
     </section>
   );
 };
+
+export default FAQs;
