@@ -51,6 +51,7 @@ export default () => {
               >
                 {steps.stepsItems.map((item, idx) => (
                   <li
+                    key={idx}
                     aria-current={steps.currentStep == idx + 1 ? "step" : false}
                     className="flex-1 last:flex-none flex md:items-center"
                   >
