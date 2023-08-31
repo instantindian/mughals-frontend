@@ -1,0 +1,6 @@
+export {default as gobbi} from "./tumbnail.jpg"
+export {default as gg} from "./g1.jpeg"
+export {default as gf} from "./g2.jpeg"
+export {default as gk} from "./g3.jpeg"
+export {default as gm} from "./g4.jpeg"
+export {default as gn} from "./g5.jpeg"
