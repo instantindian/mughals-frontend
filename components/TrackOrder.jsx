@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Wrapper from "./Wrapper";
 
-export default () => {
+const TrackOrder =  () => {
   const [steps, setStep] = useState({
     stepsItems: [
       "Order Confirmation",
@@ -157,3 +157,5 @@ export default () => {
     </div>
   );
 };
+
+export default TrackOrder;
