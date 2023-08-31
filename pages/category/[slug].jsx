@@ -1,22 +1,8 @@
-import Wrapper from '@/components/Wrapper'
 import { useRouter } from 'next/router'
-import { Fragment} from "react";
 import MenuBanner from "../../components/MenuBanner"
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/20/solid";
 import ProductCard from '@/components/ProductCard';
-import Categories from '@/components/Homemenu';
 import React,{useState,useEffect} from 'react';
 import { fetchDataFromApi } from '@/utils/api';
-import MenuShowCase from '@/components/MenuShowCase';
-import MenuShowCase2 from '@/components/MenuShowCase2';
 import useSWR from "swr";
 const maxResult = 10;
 
