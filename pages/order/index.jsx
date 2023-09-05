@@ -6,7 +6,7 @@ import React from "react";
 
 const Order = () => {
   return (
-    <div className="w-full md:py-20">
+    <div className="w-auto md:py-20">
       {/* wrapper */}
       <Wrapper>
         <div className="flex flex-col gap-4">
@@ -32,7 +32,7 @@ const Order = () => {
               </p>
         </Link>
          
-          <div className="flex gap-5 lg:gap-10 flex-col lg:flex-row">
+          <div className="flex gap-5 lg:gap-5 flex-col lg:flex-row">
             
 
             {/* order tracking */}
@@ -60,10 +60,11 @@ const Order = () => {
                 </div>
               </div>
 
-              {/* delivery address */}
+
+              
             </div>
 
-
+            {/* delivery address */}
             <div className=" flex flex-col gap-5 ">
                 
                 {/* shipping address */}
@@ -75,7 +76,7 @@ const Order = () => {
                 {/* map */}
                 <div className="">
                   <iframe
-                    className=" w-[100%] h-[100%] lg:w-[600px] lg:h-[300px]"
+                    className=" w-[100%] h-[100%] md:w-[500px] md:h-[300px]"
                     height="100%"
                     frameBorder="0"
                     title="map"
@@ -171,12 +172,18 @@ const Order = () => {
                                     
                     
                     </div>
+                    
 
                 </div>
 
               
 
             </div>
+
+
+
+
+           
             </div>
         </div>
       </Wrapper>

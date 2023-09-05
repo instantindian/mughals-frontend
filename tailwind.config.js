@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -14,7 +15,8 @@ module.exports = {
       },
       colors: {
         // orangeColorBackground : "#ffeee5",
-        orangeColorBackground : "#FDDC5C",
+        // orangeColorBackground : "#FDDC5C",
+        orangeColorBackground : "#f0d571",
         lightOverlay:"#ffffff77",
         secondaryColor : "#155264 ",
         thirdColor : "#191D88",

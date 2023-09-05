@@ -22,31 +22,12 @@ const SignUpPage = () => {
         <div className='flex flex-col items-center bg-lightOverlay  w-[100%] md:w-[50%] h-[100%] z-10 
         backdrop-blur-sm p-4 px-4 py-12 gap-6'>
             
-            <div className='flex-col  items-center'>
-              
+            <div className='flex-col  items-center '>
             
-              <div className='lg:mx-52'>
-                            <Link href="/" className='flex  items-center  gap-1 mb-4'>
-                                <img src="/mainlogo1.png"  className='w-5 md:w-[80px]' alt='instant indian'/>
-                                <p className='text-lg md:text-2xl font-bold text-secondaryColor'>MUGHALS</p>
-                            </Link>
-              </div>
               
               {/* signup */}
-              <div className='lg:mx-40'>
+              <div className='mx-52 lg:mx-60  '>
                 <SignUp />
-              </div>
-
-              {/* Available cities */}
-              <div className="flex mt-3 flex-col">
-                
-                <p className="font-extrabold text-lg text-secondaryColor underline "> We are Available in cities</p>
-
-                {/* cities */}
-                <p className="font-extrabold text-gray-800">
-                  New York, Chicago, San Francisco, Dallas, San Jose-CA, Los Angeles, Houston, 
-                  Maryland
-                </p>
               </div>
 
             </div>

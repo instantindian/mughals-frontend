@@ -194,6 +194,7 @@ const ProductDetails = ({ product, products }) => {
             {/* ADD TO CART BUTTON START */}
             <button
               className="w-full mb-5 py-4 rounded-lg bg-black text-white text-lg font-medium transition-transform active:scale-95  hover:opacity-75"
+              // className=" bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
               onClick={() => {
                 if (!selectedSize) {
                   setShowError(true);

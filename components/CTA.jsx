@@ -18,12 +18,12 @@ const CTA = () => {
             />
           </div>
           <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <h3 className="text-secondaryColor text-lg font-bold">
+            <h3 className="text-black/80 text-lg font-extrabold">
               WHAT WE HAVE ON MENU
             </h3>
-            <p className="text-black/60 text-3xl font-bold sm:text-4xl">
+            <p className="text-black/70 text-3xl font-bold sm:text-4xl">
                 We serve the best {" "}
-                <span className="text text-secondaryColor">Indian Food</span> {" "}
+                <span className="text text-orange-700">Indian Food</span> {" "}
                   in town
             </p>
             <p className="mt-3 text-gray-600">
@@ -35,10 +35,10 @@ const CTA = () => {
             <div className="flex pt-7">
                 <Link
                 href={"/"}
-                className="px-10 py-3.5 w-full bg-gradient-to-bl from-secondaryColor to-thirdColor text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
-                >
+                className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+              >
                 View Menu
-                </Link>
+              </Link>
 
             </div>
             

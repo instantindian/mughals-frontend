@@ -28,7 +28,7 @@ const Delivery = () => {
                 <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-16 justify-between md:px-8 lg:flex">
                     <div>
                         <div className="max-w-xl space-y-3">
-                            <h3 className="text-secondaryColor text-lg font-bold">
+                            <h3 className="text-black/80 text-lg font-extrabold">
                                 DELIVERY
                             </h3>
                             <p className="text-gray-600 text-xl font-bold sm:text-4xl">

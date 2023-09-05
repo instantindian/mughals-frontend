@@ -180,6 +180,7 @@ const Cart = () => {
                                 width={300}
                                 height={300}
                                 className="w-[300px] md:w-[400px]"
+                                alt='empty-cart'
                             />
                             <span className="text-xl font-bold">
                                 Your cart is empty

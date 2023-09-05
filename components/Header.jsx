@@ -78,7 +78,7 @@ const Header = () => {
             {/* Logo */}
             <div >
                 <Link href="/" className='flex justify-center items-center  gap-1'>
-                    <img src="/mainlogo1.png"  className='w-14 md:w-[80px]' alt='instant indian'/>
+                    <img src="/mainlogo1.png"  className='w-48 -ml-11 lg:-ml-20 md:w-[320px]' alt='instant indian'/>
                     {/* <p className='text-lg md:text-2xl font-bold text-secondaryColor'>MUGHALS</p> */}
                 </Link>
             </div>
@@ -90,13 +90,13 @@ const Header = () => {
                 <div className='flex items-center gap-2'>
                 <Link
                     href={"/signup"}
-                    className="px-7 py-3 w-full bg-white text-secondaryColor text-center rounded-md shadow-xl block sm:w-auto font-bold"
+                    className="px-7 py-3 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
                 >
                     SignUp
                 </Link>
                 <Link
                     href={"/login"}
-                    className="px-7 py-3 w-full bg-gradient-to-bl from-secondaryColor to-thirdColor text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+                    className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
                 >
                     Log In
                 </Link>
@@ -128,17 +128,6 @@ const Header = () => {
 
             {/* left side icon start */}
              <div className="flex items-center gap-2 text-black">
-
-                {/* <div className='w-8 md:w-12 h-8 md:h-12 flex  rounded-full justify-center items-center hover:bg-black/[0.05] cursor-pointer 
-                    relative'>
-                        
-                        <IoMdHeartEmpty className='text-[15px] md:text-[20px]'/>
-                        
-                        <div className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]">
-                        4
-                        </div>
-                        
-                </div> */}
 
                 
                  {/* shopping cart menu icon start */}

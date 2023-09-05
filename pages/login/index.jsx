@@ -25,12 +25,6 @@ const LoginPage = () => {
             <div className='flex-col  items-center'>
               
             
-              <div className='lg:mx-52'>
-                            <Link href="/" className='flex  items-center  gap-1 mb-4'>
-                                <img src="/mainlogo1.png"  className='w-5 md:w-[80px]' alt='instant indian'/>
-                                <p className='text-lg md:text-2xl font-bold text-secondaryColor'>MUGHALS</p>
-                            </Link>
-              </div>
               
               {/* signup */}
               <div className='lg:mx-40'>
@@ -38,7 +32,7 @@ const LoginPage = () => {
               </div>
 
               {/* Available cities */}
-              <div className="flex mt-3 flex-col">
+              <div className="flex mt-3 flex-col p-4">
                 
                 <p className="font-extrabold text-lg text-secondaryColor underline "> We are Available in cities</p>
 

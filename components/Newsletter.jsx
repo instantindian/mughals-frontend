@@ -43,11 +43,11 @@ const Newsletter = () => {
               />
             </div>
             <Link
-              href={"/"}
-              className="px-10 py-3.5 w-full bg-gradient-to-bl from-secondaryColor to-thirdColor text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
-            >
-              Subscribe
-            </Link>
+            href={"/"}
+            className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+          >
+            Subscribe
+          </Link>
           </form>
         </div>
       </div>

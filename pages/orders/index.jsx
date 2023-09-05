@@ -4,7 +4,7 @@ import React from 'react'
 
 const Orders = () => {
   return (
-    <div className='w-full md:py-20'>
+    <div className='w-auto md:py-20'>
       <Wrapper>
         <>
         {/* Heading of Orders */}

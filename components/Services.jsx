@@ -9,8 +9,8 @@ const Services = () => {
       
       {/* services heading  */}
       <div className='flex items-center flex-col'>
-        <p className='text-secondaryColor  text-2xl font-bold '>WHAT WE SERVE</p>
-        <p className='text-gray-600 text-xl font-semibold'>Savor Authentic Indian Flavors</p>
+        <p className='text-orange-950  text-2xl font-bold '>WHAT WE SERVE</p>
+        <p className='text-amber-800 text-xl font-semibold'>Savor Authentic Indian Flavors</p>
         {/* <p className='text-gray-400 services-heading3'> Delivery Partner</p> */}
       </div>
 

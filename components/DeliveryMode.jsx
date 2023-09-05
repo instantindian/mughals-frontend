@@ -19,7 +19,7 @@ const DeliveryMode = () => {
           <div className="flex gap-1 bg-gray-200 rounded-xl p-1">
             <button
               className={`flex-1 p-4 text-center rounded-xl font-semibold ${
-                activeTab === 'online' ? 'bg-secondaryColor text-white' : 'bg-gray-200'
+                activeTab === 'online' ? 'bg-black text-white' : 'bg-gray-200'
               }`}
               onClick={() => handleTabChange('online')}
             >
@@ -27,7 +27,7 @@ const DeliveryMode = () => {
             </button>
             <button
               className={`flex-1 py-2 px-4 text-center rounded-xl font-semibold ${
-                activeTab === 'pickup' ? 'bg-secondaryColor text-white' : 'bg-gray-200'
+                activeTab === 'pickup' ? 'bg-black text-white' : 'bg-gray-200'
               }`}
               onClick={() => handleTabChange('pickup')}
             >

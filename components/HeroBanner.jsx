@@ -39,10 +39,10 @@ const HeroBanner = () => {
         </div>
 
         {/* left main heading part  */}
-        <p className="text-[40px] text-darkTextColor md:text-[64px] font-sans font-bold leading-[5rem] ">
-          <span className="text-black/70">Apana</span>
-          <span className="text text-thirdColor"> </span>{" "}
-          <span className="text text-secondaryColor">Hyderabadi</span> 
+        <p className="text-[40px] text-darkTextColor md:text-[62px] font-sans font-bold leading-[5rem] ">
+          <span className="text-black/[0.7]">Apna</span>
+          <span className="text "> </span>{" "}
+          <span className="text text-orange-700">Hyderabadi</span> 
           <span className="text-black/70">{" "}food delivered to your door</span>
           
         </p>
@@ -58,13 +58,13 @@ const HeroBanner = () => {
         <div className="mt-6 md:mt-8 justify-center items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex ">
           <Link
             href={"/"}
-            className="px-10 py-3.5 w-full bg-gradient-to-bl from-secondaryColor to-thirdColor text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+            className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
           >
             Get started
           </Link>
           <Link
             href={"/"}
-            className="px-10 py-3.5 w-full text-secondaryColor text-center border rounded-md duration-300 hover:text-thirdColor hover:shadow block sm:w-auto font-semibold"
+            className="px-10 py-3.5 w-full text-secondaryColor text-center border rounded-md duration-300 hover:text-orange-700 hover:shadow block sm:w-auto font-semibold"
           >
             Know More About us
           </Link>
@@ -99,13 +99,13 @@ const HeroBanner = () => {
           src={Food2}
           alt="idly"
           srcset=""
-          className="md:w-[100px] food-img food-2"
+          className="md:w-[300px] food-img food-2"
         />
         <Image
           src={Food3}
           alt="indian curry"
           srcset=""
-          className="md:w-[100px] food-img food-3"
+          className="md:w-[320px] food-img food-3"
         />
 
 

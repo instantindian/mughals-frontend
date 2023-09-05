@@ -30,8 +30,8 @@ const Footer = () => {
                         <div className="space-y-6">
                             {/* Logo */}
                             <Link href="/" className='flex  items-center  gap-1'>
-                                <img src="/mainlogo1.png"  className='w-5 md:w-[80px]' alt='instant indian'/>
-                                <p className='text-lg md:text-2xl font-bold text-secondaryColor'>MUGHALS</p>
+                                <img src="/mainlogo1.png"  className='w-36 md:w-[220px]' alt='instant indian'/>
+                                
                             </Link>
                             <p className="max-w-md">
                                 Nulla auctor metus vitae lectus iaculis, vel euismod massa efficitur.
