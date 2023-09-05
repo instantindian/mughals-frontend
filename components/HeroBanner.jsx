@@ -43,7 +43,7 @@ const HeroBanner = () => {
           <span className="text-black/[0.7]">Apna</span>
           <span className="text "> </span>{" "}
           <span className="text text-orange-700">Hyderabadi</span> 
-          <span className="text-black/70">{" "}food delivered to your door</span>
+          <span className="text-black/70">{" "}food delivered to your table</span>
           
         </p>
 
