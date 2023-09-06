@@ -17,9 +17,9 @@ const HeroBanner = () => {
   return (
     <motion.div className="w-full xl:h-[720px] grid grid-cols-1 xl:grid-cols-2 gap-3 p-2 md:gap-6 bg-orangeColorBackground">
       {/* left part */}
-      <div className="flex flex-col items-center justify-start md:p-4 gap-8 md:items-baseline">
+      <div className="flex flex-col items-start justify-start md:p-4 gap-8 md:items-baseline">
         {/* {greetings} */}
-        <div className="px-4 py-1  items-center justify-center gap-5 bg-white rounded-full md:flex hidden">
+        <div className="px-4 py-1  items-center justify-center gap-5 bg-white rounded-full flex">
           <p className="text-lg font-bold text-secondaryColor">Hello Guest</p>
 
           {/* delivery icon */}
@@ -50,20 +50,24 @@ const HeroBanner = () => {
         </p>
 
         {/* Banner buttons */}
-        <div className="mt-6 md:mt-8 justify-center items-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex ">
-          <Link
-            href={"/"}
-            className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
-          >
-            Get started
-          </Link>
-          <Link
-            href={"/"}
-            className="px-10 py-3.5 w-full text-secondaryColor text-center border rounded-md duration-300 hover:text-orange-700 hover:shadow block sm:w-auto font-semibold"
-          >
-            Know More About us
-          </Link>
+        <div className="">
+          <div className="mt-6 md:mt-8 justify-center items-center space-y-3 sm:space-x-6 sm:space-y-0 md:flex">
+            <Link
+              href={"/"}
+              className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+            >
+              Get started
+            </Link>
+            <Link
+              href={"/"}
+              className="px-10 py-3.5 w-full text-secondaryColor text-center border rounded-md duration-300 hover:text-orange-700 hover:shadow block sm:w-auto font-semibold"
+            >
+              Know More About us
+            </Link>
+          </div>
+
         </div>
+        
 
         {/* Available cities */}
         <div className="flex mt-3 flex-col">

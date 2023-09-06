@@ -86,25 +86,10 @@ const Header = () => {
 
 
             
-            {!userId && (
-                <div className='flex items-center gap-2'>
-                <Link
-                    href={"/signup"}
-                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
-                >
-                    SignUp
-                </Link>
-                <Link
-                    href={"/login"}
-                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
-                >
-                    LogIn
-                </Link>
-                </div>
-            )}
             
             
-            {userId && (
+            
+            {/* {userId && ( */}
                 <>
                 <Menu
                 showCatMenu={showCatMenu} 
@@ -125,7 +110,7 @@ const Header = () => {
             
 
 
-
+            
             {/* left side icon start */}
              <div className="flex items-center gap-2 text-black">
 
@@ -133,8 +118,9 @@ const Header = () => {
                  {/* shopping cart menu icon start */}
 
 
-                
-                 <Link href="/Cart">
+                {userId && (
+                    <div className='flex items-center'>
+                        <Link href="/Cart">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <BsCart className="text-[15px] md:text-[20px]" />
                             {cartItems.length > 0 && (
@@ -143,13 +129,36 @@ const Header = () => {
                                 </div>
                             )}
                         </div>
-                </Link>
-                <div className='ml-auto'>
-                    <UserButton afterSignOutUrl="/"/>
-                </div>
+                        </Link>
+                        <div className='ml-auto'>
+                            <UserButton afterSignOutUrl="/"/>
+                        </div>
+                    </div>
+                    
+                )}
+                 
                 {/* shopping cart menu icon end */}
 
 
+
+                
+
+                {!userId && (
+                <div className='flex items-center gap-2'>
+                <Link
+                    href={"/signup"}
+                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
+                >
+                    SignUp
+                </Link>
+                <Link
+                    href={"/login"}
+                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+                >
+                    LogIn
+                </Link>
+                </div>
+                )}
 
                 {/* Moblie icon start */}
                 <div className='w-8 flex md:w-12 h-8 md:hidden  rounded-full justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2'>
@@ -172,7 +181,7 @@ const Header = () => {
             
                 
                 </>
-            )}
+            {/* )} */}
             {/* menu items desktop view */}
             
 
