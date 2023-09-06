@@ -13,18 +13,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-
 const HeroBanner = () => {
   return (
-    // breaking down into two parts
-    <motion.div className="w-full md:h-[720px]  grid grid-cols-1 md:grid-cols-2  gap-3 p-2 md:gap-6  bg-orangeColorBackground ">
+    <motion.div className="w-full xl:h-[720px] grid grid-cols-1 xl:grid-cols-2 gap-3 p-2 md:gap-6 bg-orangeColorBackground">
       {/* left part */}
-      <div className="flex flex-col items-center justify-start md:p-4  gap-8 md:items-baseline">
+      <div className="flex flex-col items-center justify-start md:p-4 gap-8 md:items-baseline">
         {/* {greetings} */}
         <div className="px-4 py-1  items-center justify-center gap-5 bg-white rounded-full md:flex hidden">
-          <p className="text-lg font-bold text-secondaryColor">
-            Hello Guest
-          </p>
+          <p className="text-lg font-bold text-secondaryColor">Hello Guest</p>
 
           {/* delivery icon */}
           <div className="w-10 h-10 flex items-end justify-center rounded-full bg-yellow-200 shadow-md ">
@@ -42,9 +38,8 @@ const HeroBanner = () => {
         <p className="text-[40px] text-darkTextColor md:text-[62px] font-sans font-bold leading-[5rem] ">
           <span className="text-black/[0.7]">Apna</span>
           <span className="text "> </span>{" "}
-          <span className="text text-orange-700">Hyderabadi</span> 
-          <span className="text-black/70">{" "}food delivered to your table</span>
-          
+          <span className="text text-orange-700">Hyderabadi</span>
+          <span className="text-black/70"> food delivered to your table</span>
         </p>
 
         {/* left secondary text */}
@@ -72,68 +67,50 @@ const HeroBanner = () => {
 
         {/* Available cities */}
         <div className="flex mt-3 flex-col">
-          
-          <p className="font-extrabold text-lg text-gray-600 underline ">Available in cities</p>
+          <p className="font-extrabold text-lg text-gray-600 underline ">
+            Available in cities
+          </p>
 
           {/* cities */}
           <p className="font-bold text-gray-500">
-            New York, Chicago, San Francisco, Dallas, San Jose-CA, Los Angeles, Houston, 
-            Maryland
+            New York, Chicago, San Francisco, Dallas, San Jose-CA, Los Angeles,
+            Houston, Maryland
           </p>
         </div>
-
       </div>
 
-      {/* Right side hero banner */}
-      <div className="py-2 div2  items-center justify-end relative md:flex hidden">
-
-
+      {/* Right side hero banner (hidden on mobile and iPad) */}
+      <div className="py-2 div2 items-center justify-end relative hidden md:hidden 2xl:flex">
         {/* food image */}
         <Image
           src={Food1}
           alt="indian briyani"
-          srcset=""
-          className="md:w-[350px] food-img top-[25%] absolute left-[6%] food-1"
+          srcSet=""
+          className="w-full md:w-[350px] max-w-screen-md food-img md:top-[25%] absolute left-[6%] food-1"
         />
         <Image
           src={Food2}
           alt="idly"
-          srcset=""
-          className="md:w-[300px] food-img food-2"
+          srcSet=""
+          className="w-full md:w-[300px] max-w-screen-md food-img food-2"
         />
         <Image
           src={Food3}
           alt="indian curry"
-          srcset=""
-          className="md:w-[320px] food-img food-3"
+          srcSet=""
+          className="w-full md:w-[320px] max-w-screen-md food-img food-3"
         />
 
-
         {/* dialog messages */}
-            <Image src={dialog1} 
-            className="dialog-1 z-10" 
-            alt="" srcset="" />
-            <Image src={dialog2}
-            className="dialog-2"
-            alt="" />
-
-            <Image src={circle} className="shape shape-1" alt="" />
-            <Image src={circle} className="shape shape-2" alt="" />
-            <Image src={circle} className="shape shape-3" alt="" />
-            
-
-
-            <Image src={Ring} className="shape shape-4" alt="" />
-            <Image src={Ring} alt="" srcset="" className='shape shape-5' />
-
-
-
-
-
-
+        <Image src={dialog1} className="dialog-1 z-10" alt="" srcSet="" />
+        <Image src={dialog2} className="dialog-2" alt="" srcSet="" />
+        <Image src={circle} className="shape shape-1" alt="" srcSet="" />
+        <Image src={circle} className="shape shape-2" alt="" srcSet="" />
+        <Image src={circle} className="shape shape-3" alt="" srcSet="" />
+        <Image src={Ring} className="shape shape-4" alt="" srcSet="" />
+        <Image src={Ring} className="shape shape-5" alt="" srcSet="" />
       </div>
     </motion.div>
-    // hell
   );
 };
 

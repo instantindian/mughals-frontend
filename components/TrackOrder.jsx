@@ -9,7 +9,7 @@ const TrackOrder =  () => {
       "Out For Delivery",
       "Delivered",
     ],
-    currentStep: 2,
+    currentStep: 3,
   });
 
   return (
@@ -17,12 +17,12 @@ const TrackOrder =  () => {
       <Wrapper>
         <div className=" flex flex-col lg:gap-10 ">
 
-          <div className="flex justify-between gap-3 flex-col md:flex-row md:gap-0">
+          <div className="flex justify-between gap-3 flex-col lg:flex-row lg:gap-0">
             <div className="flex flex-col gap-2 lg:gap-4">
               {/* order status */}
-              <div className="text-base font-semibold">
+              <div className="text-lg font-semibold">
                 Order Status <span className="text-xs font-normal">ID</span>
-                <span className="text-xs font-base">#1259394</span>
+                <span className="text-xs font-extrabold text-black/70">#1259394</span>
               </div>
 
               {/* inProgress  / completed */}
@@ -37,17 +37,17 @@ const TrackOrder =  () => {
               </div>
             </div>
 
-            <div className="text-sm font-semibold text-gray-500">
+            <div className="text-sm font-semibold text-gray-500 md:mb-5 ">
                 Order on Tue,March 23, 2022, 12:33 PM
             </div>
           
           </div>
 
           <div>
-            <div className="max-w-2xl mx-auto px-4 md:px-0">
+            <div className="max-w-2xl mx-auto px-4 lg:px-0">
               <ul
                 aria-label="Steps"
-                className="items-center text-gray-600 font-medium md:flex md:gap-12"
+                className="items-center text-gray-600 font-medium md:flex lg:gap-16"
               >
                 {steps.stepsItems.map((item, idx) => (
                   <li

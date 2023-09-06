@@ -15,7 +15,7 @@ const Services = () => {
       </div>
 
       {/* services vectors */}
-      <div className='grid md:grid-cols-3 grid-cols-1 md:px-36  px-10 md:gap-24 md:justify-center'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 lg:px-36  px-10 lg:gap-24 lg:justify-center'>
         
         <article className=''>
           <Image src={FoodOrder} alt="" srcset="" width={340} />

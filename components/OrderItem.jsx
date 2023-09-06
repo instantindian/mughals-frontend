@@ -13,7 +13,7 @@ const OrderItem = () => {
 
     {/* Image start */}
 
-    <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
+    <div className="shrink-0 aspect-square w-[80px] lg:w-[140px]">
                 <Image
                     src = {SignUpImage}
                     width={1000}
@@ -28,8 +28,11 @@ const OrderItem = () => {
         {/* card left side */}
         <div className="flex flex-col lg:gap-4 gap-2">
             {/* orderid */}
-            <div className="text-sm md:text-sm font-semibold text-black/[0.5]">
-                        ORDER ID : #14572197234
+            <div className="text-sm lg:text-md font-extrabold text-black/70">
+                        ORDER ID : {" "}
+                        <span className='text-black/[0.5]'>
+                         #14572197234
+                        </span>
             </div>
 
             {/* items */}
@@ -38,7 +41,7 @@ const OrderItem = () => {
             </div>
 
             {/* Delivery Status */}
-            <div className="text-sm md:text-base font-bold text-black/[0.5] mt-2">
+            <div className="text-sm lg:text-base font-bold text-black/70 mt-2">
                         Delivery Status : {" "}
                         <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
                         Deliverd
@@ -54,20 +57,21 @@ const OrderItem = () => {
                 Order on Tue,March 23, 2022, 12:33 PM
             </div>
 
-            <div className=' text-sm lg:text-md font-bold text-black/[0.4] flex'>
+            <div className=' text-sm lg:text-md font-bold text-black/70 flex gap-1 items-center'>
                 Total Amount Paid : 
-                <span className='text-md lg:text-base text-black/[0.7]'>
-                    $ 45.17
+                <span>{" "}</span>
+                <span className='text-md lg:text-base text-black/60'>
+                 $ 45.17
                 </span>
             </div>
 
             <Link href={"/order"} 
                 className='flex items-center'>
                     
-                    <p className="font-extrabold text-md lg:text-base text-secondaryColor cursor pointer">
+                    <p className="font-extrabold text-md lg:text-base text-orange-700 cursor pointer">
                         VIEW DETAILS
                     </p>
-                    <span className='text-4xl text-secondaryColor'>
+                    <span className='text-4xl text-orange-700'>
                     <WiDirectionRight/>
                     </span>
             </Link>

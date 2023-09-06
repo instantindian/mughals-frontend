@@ -40,12 +40,12 @@ const ProductDetails = ({ product, products }) => {
   };
 
   return (
-    <div className="w-full md:py-20  ">
+    <div className="w-full py-10 lg:py-20">
       <ToastContainer />
       <Wrapper>
-        <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
+        <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[75px]">
           {/* left column start */}
-          <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
+          <div className="w-full lg:w-auto flex-[1.5] max-w-fit lg:max-w-full mx-auto lg:mx-0">
             <ProductDetailsCarousel images={p.image.data} />
           </div>
           {/* left column end */}

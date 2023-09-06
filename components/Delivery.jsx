@@ -25,24 +25,24 @@ const Delivery = () => {
     
         return (
             <section className="py-14">
-                <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-16 justify-between md:px-8 lg:flex">
+                <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-16 justify-between lg:px-8 lg:flex lg:max-w-full">
                     <div>
-                        <div className="max-w-xl space-y-3">
+                        <div className="max-w-full space-y-3">
                             <h3 className="text-black/80 text-lg font-extrabold">
                                 DELIVERY
                             </h3>
-                            <p className="text-gray-600 text-xl font-bold sm:text-4xl">
+                            <p className="text-gray-600 text-xl font-bold sm:text-4xl md:leading-relaxed">
                                 Now we provide different ways to collect your food.
                             </p>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, nisl eget molestie varius, enim ex faucibus purus
                             </p>
                         </div>
-                        <div className="mt-12 max-w-lg lg:max-w-none">
+                        <div className="mt-12 max-w-full lg:max-w-none">
                             <ul className="space-y-8">
                                 {
                                     deliveryOptions.map((item, idx) => (
-                                        <li key={idx} className="flex gap-x-4">
+                                        <li key={idx} className="flex gap-x-4  md:p-4 md:rounded-md">
                                             <div className="flex-none w-14 h-14 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center">
                                                 {item.icon}
                                             </div>

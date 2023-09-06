@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import SignUpImage from "../../public/signup.jpg"
 import {SignIn} from "@clerk/nextjs"
-import Link from 'next/link'
+
 
 
 

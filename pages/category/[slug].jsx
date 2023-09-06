@@ -120,11 +120,11 @@ const Category = ({category,products, slug}) => {
 
 
   return (
-    <div className='w-full md:py-10 md:px-10'>
+    <div className='max-w-full md:py-10 md:px-10'>
     
 
     {/* Banner */}
-    <div className='w-full h-full'>
+    <div className='max-w-full max-h-full'>
     <MenuBanner/>
     </div>
     
@@ -255,7 +255,7 @@ const Category = ({category,products, slug}) => {
               Products
             </h2>
 
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3 max-2xl:grids-cols-4 items-center">
               {/* Filters */}
               {/* <MenuShowCase2 categories={subCategories} filters={filters}/> */}
             

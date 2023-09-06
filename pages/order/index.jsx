@@ -6,13 +6,13 @@ import React from "react";
 
 const Order = () => {
   return (
-    <div className="w-auto md:py-20">
+    <div className="w-auto lg:py-16">
       {/* wrapper */}
       <Wrapper>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ">
           {/* top */}
 
-          <Link href={"/orders"} className="flex gap-2 mt-5 md:mt-0">
+          <Link href={"/orders"} className="flex gap-2 mt-5 lg:mt-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -32,11 +32,11 @@ const Order = () => {
               </p>
         </Link>
          
-          <div className="flex gap-5 lg:gap-5 flex-col lg:flex-row">
+          <div className="flex gap-5 lg:gap-20 flex-col lg:flex-row justify-between">
             
 
             {/* order tracking */}
-            <div className="flex flex-col md:flex-row justify-between gap-2 lg:gap-10">
+            <div className="flex flex-col lg:flex-row justify-between">
               <div className="flex flex-col gap-2 lg:gap-8">
                 {/* track order */}
                 <div className="flex flex-col lg:flex-row gap-12 ">
@@ -51,7 +51,7 @@ const Order = () => {
                     </p>
 
                     {/* menu items cards */}
-                    <div className="flex flex-col gap-2" >
+                    <div className="flex flex-col gap-2 lg:px-8" >
                         <TrackItem/>
                         <TrackItem/>
                         <TrackItem/>
@@ -76,7 +76,7 @@ const Order = () => {
                 {/* map */}
                 <div className="">
                   <iframe
-                    className=" w-[100%] h-[100%] md:w-[500px] md:h-[300px]"
+                    className=" w-[100%] h-[100%] md:w-[400px] lg:max-w-[400px] lg:h-[300px]"
                     height="100%"
                     frameBorder="0"
                     title="map"

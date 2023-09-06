@@ -90,15 +90,15 @@ const Header = () => {
                 <div className='flex items-center gap-2'>
                 <Link
                     href={"/signup"}
-                    className="px-7 py-3 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
+                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
                 >
                     SignUp
                 </Link>
                 <Link
                     href={"/login"}
-                    className="px-10 py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
+                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-gradient-to-bl from-orange-600 bg-orange-400 text-white text-center rounded-md shadow-xl block sm:w-auto font-semibold "
                 >
-                    Log In
+                    LogIn
                 </Link>
                 </div>
             )}
