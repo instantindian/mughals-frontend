@@ -80,7 +80,7 @@ const HeroBanner = () => {
       </div>
 
       {/* Right side hero banner (hidden on mobile and iPad) */}
-      <div className="py-2 div2 items-center justify-end relative hidden md:hidden 2xl:flex">
+      <div className="py-2 div2 items-center justify-end relative hidden md:hidden lg:block 2xl:flex">
         {/* food image */}
         <Image
           src={Food1}
