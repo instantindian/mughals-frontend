@@ -7,12 +7,13 @@ import {BsChevronDown} from "react-icons/bs"
 // fake data 
 const data = [
     { id: 1, name: "Home", url: "/" },
-    { id: 2, name: "About", url: "/about" },
-    { id: 3, name: "Categories", subMenu: true },
-    {id: 5, name: "Orders", url:"/orders"},
-    { id: 4, name: "Contact", url: "/contact" },
-
+    { id: 3, name: "Menu", subMenu: true},
+    { id: 5, name: "About us", url: "/" },
+    { id: 4, name: "Catering", url: "/" },
+    {id: 6, name:"Franchise", url:"/franchise"},
+    {id: 6, name:"Contact", url:"/contact"}
 ];
+
 
 const subMenuData = [
     { id: 1, name: "Jordan", doc_count: 11 },

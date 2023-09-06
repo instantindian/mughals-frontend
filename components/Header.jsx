@@ -117,9 +117,17 @@ const Header = () => {
                 
                  {/* shopping cart menu icon start */}
 
+                
+
 
                 {userId && (
-                    <div className='flex items-center'>
+                    <div className='flex items-center lg:gap-2'>
+                        <Link
+                        href={"/orders"}
+                        className='hidden md:flex items-center gap-8 text-secondaryColor font-bold'
+                        >
+                            Orders
+                        </Link>
                         <Link href="/Cart">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative">
                             <BsCart className="text-[15px] md:text-[20px]" />
@@ -147,7 +155,7 @@ const Header = () => {
                 <div className='flex items-center gap-2'>
                 <Link
                     href={"/signup"}
-                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-white text-orange-600 text-center rounded-md shadow-xl block sm:w-auto font-bold"
+                    className="px-5 py-2.5 lg:px-10 lg:py-3.5 w-full bg-white text-orange-600 text-center rounded-md shadow-xl sm:w-auto font-bold hidden lg:block"
                 >
                     SignUp
                 </Link>

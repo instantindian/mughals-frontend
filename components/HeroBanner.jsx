@@ -35,7 +35,7 @@ const HeroBanner = () => {
         </div>
 
         {/* left main heading part  */}
-        <p className="text-[40px] text-darkTextColor md:text-[62px] font-sans font-bold leading-[5rem] ">
+        <p className="text-[40px] text-darkTextColor md:text-[62px] font-sans font-bold leading-[3rem] lg:leading-[5rem]  ">
           <span className="text-black/[0.7]">Apna</span>
           <span className="text "> </span>{" "}
           <span className="text text-orange-700">Hyderabadi</span>
@@ -77,7 +77,7 @@ const HeroBanner = () => {
 
           {/* cities */}
           <p className="font-bold text-gray-500">
-            New York, Chicago, San Francisco, Dallas, San Jose-CA, Los Angeles,
+          O’fallon, Creve Coeur, New York, Chicago,  San Francisco, Dallas, San Jose-CA, Los Angeles,
             Houston, Maryland
           </p>
         </div>

@@ -151,7 +151,7 @@ const ProductDetails = ({ product, products }) => {
               {/* HEADING START */}
               
               <div className={`flex justify-between mb-2 ${p.spicylevel && p.spicylevel.data ? 'block' : 'hidden'}`}>
-                <div className="text-md font-semibold">How Spicy you want</div>
+                <div className="text-md font-semibold">choose level you want</div>
               </div>
               {/* HEADING END */}
 

@@ -8,7 +8,7 @@ import {BsChevronDown} from "react-icons/bs"
 const data = [
     { id: 1, name: "Home", url: "/" },
     { id: 3, name: "Menu", subMenu: true},
-    { id: 5, name: "Orders", url: "/orders" },
+    { id: 5, name: "About us", url: "/" },
     { id: 4, name: "Catering", url: "/" },
     {id: 6, name:"Franchise", url:"/franchise"},
     {id: 6, name:"Contact", url:"/contact"}
