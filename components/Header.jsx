@@ -90,7 +90,7 @@ const Header = () => {
             
             
             {/* {userId && ( */}
-                <>
+            <>
                 <Menu
                 showCatMenu={showCatMenu} 
                 setShowCatMenu={setShowCatMenu}
@@ -118,7 +118,6 @@ const Header = () => {
                  {/* shopping cart menu icon start */}
 
                 
-
 
                 {userId && (
                     <div className='flex items-center lg:gap-2'>

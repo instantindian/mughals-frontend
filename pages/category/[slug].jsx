@@ -4,7 +4,14 @@ import ProductCard from '@/components/ProductCard';
 import React,{useState,useEffect} from 'react';
 import { fetchDataFromApi } from '@/utils/api';
 import useSWR from "swr";
+import Link from "next/link";
 const maxResult = 10;
+import { BsChevronDown } from "react-icons/bs";
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+
+const categorydata = [{ id: 1, name: "Menu", subMenu: true }];
 
 
 
@@ -56,6 +63,7 @@ const filters = [
       ],
     },
   ];
+  
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -68,6 +76,19 @@ const Category = ({category,products, slug}) => {
     const [pageIndex, setPageIndex] = useState(1);
 
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+    const [categories, setCategories] = useState(null);
+    const [showCatMenu, setShowCatMenu] = useState(false);
+
+    useEffect(() => {
+      fetchCategories();
+    }, []);
+
+    const fetchCategories = async () => {
+      const { data } = await fetchDataFromApi("/api/categories?populate=*");
+      setCategories(data);
+    };
+
+
     
     // fetch the categories
     // const [categories, setCategories] = useState(null);
@@ -120,22 +141,19 @@ const Category = ({category,products, slug}) => {
 
 
   return (
-    <div className='max-w-full md:py-10 md:px-10'>
-    
+    <div className="max-w-full md:py-10 md:px-10">
+      {/* Banner */}
+      <div className="max-w-full max-h-full">
+        <MenuBanner />
+      </div>
 
-    {/* Banner */}
-    <div className='max-w-full max-h-full'>
-    <MenuBanner/>
-    </div>
-    
-    
-    {/* {products} */}
-    <section>
+      {/* {products} */}
+      <section>
         {/* {left menu} */}
 
         <div>
-        {/* Mobile filter dialog */}
-        {/* <Transition.Root show={mobileFiltersOpen} as={Fragment}>
+          {/* Mobile filter dialog */}
+          {/* <Transition.Root show={mobileFiltersOpen} as={Fragment}>
           <Dialog
             as="div"
             className="relative z-40 lg:hidden"
@@ -185,14 +203,72 @@ const Category = ({category,products, slug}) => {
           </Dialog>
         </Transition.Root> */}
 
-        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-            <h1 className=" text-lg md:text-3xl font-bold tracking-tight text-orange-950 capitalize">
-              WHAT WE HAVE IN {" "}
-              {category?.data?.[0].attributes?.name}
-            </h1>
+          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
+              <h1 className=" text-lg md:text-3xl font-bold tracking-tight text-orange-950 capitalize">
+                WHAT WE HAVE IN {category?.data?.[0].attributes?.name}
+              </h1>
 
-            {/* <div className="flex items-center">
+              {/* filter */}
+
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+                    Menu
+                    <ChevronDownIcon
+                      className="-mr-1 h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </Menu.Button>
+                </div>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
+                            )}
+                          >
+                            {categories?.map(({attributes : c, id}) =>{
+                                    return(
+                                        <Link
+                                         key={id} 
+                                         href={`/category/${c.slug}`}
+                                         onClick={() => setShowCatMenu(false)}
+                                         >
+                                            <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.04] 
+                                            rounded-md'>
+                                                {c.name}
+                                                <span className='opacity-50 text-sm'
+                                                >{`(${c.products.data.length})`}</span>
+                                                </li>
+                                        </Link>
+                                    )
+                              })}
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+
+              {/* <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <Menu.Button className="group inline-flex justify-center text-base font-semibold text-gray-700 hover:text-gray-900">
@@ -248,23 +324,22 @@ const Category = ({category,products, slug}) => {
                 <FunnelIcon className="h-5 w-5" aria-hidden="true" />
               </button>
             </div> */}
-          </div>
+            </div>
 
-          <section aria-labelledby="products-heading" className="pb-24 pt-6">
-            <h2 id="products-heading" className="sr-only">
-              Products
-            </h2>
+            <section aria-labelledby="products-heading" className="pb-24 pt-6">
+              <h2 id="products-heading" className="sr-only">
+                Products
+              </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3 max-2xl:grids-cols-4 items-center">
-              {/* Filters */}
-              {/* <MenuShowCase2 categories={subCategories} filters={filters}/> */}
-            
-            
-              {/* Products grid */}
-              {data?.data?.map((product) => (
-                        <ProductCard key={product?.id} data={product} />
-              ))}
-              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3 max-2xl:grids-cols-4 items-center">
+                {/* Filters */}
+                {/* <MenuShowCase2 categories={subCategories} filters={filters}/> */}
+
+                {/* Products grid */}
+                {data?.data?.map((product) => (
+                  <ProductCard key={product?.id} data={product} />
+                ))}
+
                 {/* <ProductCard/>
                 <ProductCard/>
                 <ProductCard/>
@@ -273,59 +348,45 @@ const Category = ({category,products, slug}) => {
                 <ProductCard/>
                 <ProductCard/>
                 <ProductCard/> */}
-              
-                
-                
-            
-            </div>
-          </section>
-        </main>
-      </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </section>
 
+      {/* PAGINATION BUTTONS START */}
+      {data?.meta?.pagination?.total > maxResult && (
+        <div className="flex gap-3 items-center justify-center my-16 md:my-0">
+          <button
+            className={`rounded py-2 px-4 bg-black text-white disabled:bg-gray-200 disabled:text-gray-500`}
+            disabled={pageIndex === 1}
+            onClick={() => setPageIndex(pageIndex - 1)}
+          >
+            Previous
+          </button>
 
-        
+          <span className="font-bold">{`${pageIndex} of ${
+            data && data.meta.pagination.pageCount
+          }`}</span>
 
-    </section>
-
-     {/* PAGINATION BUTTONS START */}
-     {data?.meta?.pagination?.total > maxResult && (
-                    <div className="flex gap-3 items-center justify-center my-16 md:my-0">
-                        <button
-                            className={`rounded py-2 px-4 bg-black text-white disabled:bg-gray-200 disabled:text-gray-500`}
-                            disabled={pageIndex === 1}
-                            onClick={() => setPageIndex(pageIndex - 1)}
-                        >
-                            Previous
-                        </button>
-
-                        <span className="font-bold">{`${pageIndex} of ${
-                            data && data.meta.pagination.pageCount
-                        }`}</span>
-
-                        <button
-                            className={`rounded py-2 px-4 bg-black text-white disabled:bg-gray-200 disabled:text-gray-500`}
-                            disabled={
-                                pageIndex ===
-                                (data && data.meta.pagination.pageCount)
-                            }
-                            onClick={() => setPageIndex(pageIndex + 1)}
-                        >
-                            Next
-                        </button>
-                    </div>
-                )}
-                {/* PAGINATION BUTTONS END */}
-                {isLoading && (
-                    <div className="absolute top-0 left-0 w-full h-full bg-white/[0.5] flex flex-col gap-5 justify-center items-center">
-                        <img src="/logo.svg" width={150} />
-                        <span className="text-2xl font-medium">Loading...</span>
-                    </div>
-                )}
-                
-
-
+          <button
+            className={`rounded py-2 px-4 bg-black text-white disabled:bg-gray-200 disabled:text-gray-500`}
+            disabled={pageIndex === (data && data.meta.pagination.pageCount)}
+            onClick={() => setPageIndex(pageIndex + 1)}
+          >
+            Next
+          </button>
+        </div>
+      )}
+      {/* PAGINATION BUTTONS END */}
+      {isLoading && (
+        <div className="absolute top-0 left-0 w-full h-full bg-white/[0.5] flex flex-col gap-5 justify-center items-center">
+          <img src="/logo.svg" width={150} />
+          <span className="text-2xl font-medium">Loading...</span>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default Category
